@@ -1,0 +1,24 @@
+docker run -d -it --name=postgres --hostname=postgres -e POSTGRES_PASSWORD=postgres -p 8082:8082 -v 'd:\docker\postgres:\postgres' postgres
+
+docker run --name=postgresoriginal --hostname=postgresoriginal -e POSTGRES_PASSWORD=postgres -d postgres
+
+
+
+
+https://phoenixnap.com/kb/deploy-postgresql-on-docker
+
+docker run --name=postgresoriginal -e POSTGRES_PASSWORD=postgres -d postgres
+docker exec -it postgresoriginal psql -U postgres
+\l
+\q
+
+
+https://medium.com/better-programming/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7
+
+docker run -d -p 5432:5432 --name postgres-browser -e POSTGRES_PASSWORD=postgres-browser postgres
+docker exec -it my-postgres bash
+
+
+https://linuxhint.com/postgresql_docker/
+
+docker run -d -it --name=mysql --hostname=mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Password123#@! mysql
